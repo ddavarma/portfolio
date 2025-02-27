@@ -1,3 +1,34 @@
+# 🚀 My Portfolio - Built with Next.js & Tailwind CSS
+
+This is my **personal portfolio website** built with **Next.js** and styled using **Tailwind CSS**.  
+It showcases my projects, skills, and experience, providing a modern, fast, and accessible web experience.
+
+## ✨ Tech Stack
+
+- **Next.js** – Server-side rendering & static generation for optimized performance.
+- **React & TypeScript** – Component-based architecture with type safety.
+- **Tailwind CSS** – Utility-first styling for a sleek and responsive UI.
+- **Framer Motion (Basic)** – Smooth animations and interactive UI elements.
+- **React Email & Resend** – Contact form integration for seamless email handling.
+- **Vercel Hosting** – Fast and reliable deployment with auto-updates.
+- **Bun** – Used for package management and development (other options available).
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have **Node.js** or **Bun** installed.
+
+📌 Features
+
+- 🌎 Fully Responsive – Mobile-first design with Tailwind CSS.
+- ⚡ Fast Performance – Optimized with Next.js and TypeScript.
+- ✉️ Contact Form Integration – Uses React Email & Resend for seamless email handling.
+- 🎨 Animations – Basic Framer Motion for smooth UI interactions.
+- 🚀 One-Click Deployment – Hosted on Vercel for automatic updates.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

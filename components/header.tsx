@@ -49,7 +49,7 @@ export default function Header() {
                     className=" bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"
                     transition={{
-                      type: "spring",
+                      type: "spring" as const,
                       stiffness: 380,
                       damping: 30,
                     }}

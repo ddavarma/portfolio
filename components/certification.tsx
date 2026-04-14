@@ -7,7 +7,9 @@ import { useSectionInView } from "@/lib/hooks";
 import { certificationsData } from "@/lib/data";
 import Image from "next/image";
 
-const fadeInAnimationVariants = {
+import type { Variants } from "framer-motion";
+
+const fadeInAnimationVariants: Variants = {
   initial: {
     opacity: 0,
     scale: 0.8,
@@ -17,7 +19,7 @@ const fadeInAnimationVariants = {
     scale: 1,
     transition: {
       delay: 0.1 * index,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100,
     },
   }),

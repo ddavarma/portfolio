@@ -58,9 +58,9 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
-const fadeInAnimationVariants = {
+const fadeInAnimationVariants: Variants = {
   initial: {
     opacity: 0,
     scale: 0.8,
@@ -70,7 +70,7 @@ const fadeInAnimationVariants = {
     scale: 1,
     transition: {
       delay: 0.1 * index,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100,
     },
   }),

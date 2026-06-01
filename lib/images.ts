@@ -42,6 +42,18 @@ export function getImagesForCategory(category: string): SiteImage[] {
     }));
 }
 
+export function findLogo(category: string, slug: string): string | null {
+  const dir = path.join(process.cwd(), "public", category, slug);
+  if (!fs.existsSync(dir)) return null;
+  for (const ext of ["svg", "png", "jpg", "jpeg", "webp"]) {
+    const filename = `logo.${ext}`;
+    if (fs.existsSync(path.join(dir, filename))) {
+      return `/${category}/${slug}/${filename}`;
+    }
+  }
+  return null;
+}
+
 function humanizeFilename(filename: string): string {
   return filename
     .replace(/\.[^.]+$/, "")

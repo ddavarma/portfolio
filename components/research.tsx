@@ -52,7 +52,7 @@ const THREADS: ResearchThread[] = [
     title: "Reliability Growth Modeling of Agent-Driven GPU Kernel Optimization",
     status: "RAMS 2027 · under review",
     statusKind: "in-progress",
-    subStatus: "Decision expected Jun 2026 · sole author",
+    subStatus: "Decision expected Jun 2026 · primary author",
     description: (
       <>
         LLM coding agents now iteratively optimize performance-critical software

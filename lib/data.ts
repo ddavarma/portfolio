@@ -7,6 +7,7 @@ import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import awsSol from "@/public/awsSol.png";
 import awsml from "@/public/awsml.png";
+import type { SectionName } from "./types";
 
 import {
   SiHtml5,
@@ -31,35 +32,13 @@ import {
   SiTerraform,
 } from "react-icons/si";
 
-export const links = [
-  {
-    name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  // {
-  //   name: "Projects",
-  //   hash: "#projects",
-  // },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Certfication",
-    hash: "#certification",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+export const links: ReadonlyArray<{ name: SectionName; hash: string }> = [
+  { name: "Home", hash: "#home" },
+  { name: "About", hash: "#about" },
+  { name: "Skills", hash: "#skills" },
+  { name: "Experience", hash: "#experience" },
+  { name: "Certfication", hash: "#certification" },
+  { name: "Contact", hash: "#contact" },
 ] as const;
 
 import { SiPytorch, SiSpring } from "react-icons/si";

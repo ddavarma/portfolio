@@ -3,6 +3,7 @@ import Certification from "@/components/certification";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Hero from "@/components/hero";
+import Research from "@/components/research";
 import Skills from "@/components/skills";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="flex flex-col items-center">
       <Hero />
       <About />
+      <Research />
       <Skills />
       <Experience />
       <Certification />

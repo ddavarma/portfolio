@@ -8,7 +8,8 @@ const ENTRIES: Omit<ExperienceEntry, "logo">[] = [
   {
     slug: "ncat",
     org: "North Carolina A&T State University",
-    role: "Graduate Research Assistant",
+    role: "PhD, Computational Data Science & Engineering · Graduate Research Assistant",
+    kindLabel: "Research",
     location: "Greensboro, NC",
     period: "Aug 2025 — present",
     description:

@@ -44,6 +44,7 @@ export type ExperienceEntry = {
   streams?: SubStream[];
   tags?: string[];
   kind: "work" | "education";
+  kindLabel?: string;
   logo: string | null;
 };
 
@@ -102,14 +103,15 @@ export default function ExperienceSection({
           variants={headerVariants}
           className="font-display text-4xl font-medium leading-[1.05] tracking-tightest text-fg sm:text-5xl"
         >
-          Before the PhD.
+          Roles and roots.
         </motion.h2>
         <motion.p
           variants={headerVariants}
           className="mt-5 max-w-2xl text-base text-fg-muted sm:text-lg"
         >
-          Two years of industry engineering at AWS and HCA, after a Master&apos;s
-          in Computer Science. Click any role for the full breakdown.
+          Where I am now — PhD research at NC A&amp;T — and the two years of
+          industry engineering at AWS and HCA that came before it. Click any
+          role for the full breakdown.
         </motion.p>
 
         <motion.div
@@ -164,7 +166,7 @@ function ExperienceCard({
             <OrgLogo entry={entry} size={44} />
             <div className="inline-flex items-center gap-2 rounded-full border border-line bg-bg-subtle px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-fg-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-fg-subtle transition-colors duration-300 group-hover:bg-accent" />
-              {entry.kind === "education" ? "Education" : "Engineering"}
+              {entry.kindLabel ?? (entry.kind === "education" ? "Education" : "Engineering")}
             </div>
           </div>
 
@@ -364,7 +366,7 @@ function ExperienceModal({
               <OrgLogo entry={entry} size={68} />
               <div className="min-w-0 flex-1">
                 <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-subtle">
-                  {entry.kind === "education" ? "Education" : "Engineering"} ·{" "}
+                  {entry.kindLabel ?? (entry.kind === "education" ? "Education" : "Engineering")} ·{" "}
                   {entry.period}
                 </p>
                 <h3 className="mt-2 font-display text-2xl font-medium leading-[1.15] tracking-tightest text-fg sm:text-3xl">

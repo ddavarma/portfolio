@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, type Variants } from "framer-motion";
 import { BsLinkedin, BsGithub, BsArrowUpRight } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
@@ -45,6 +45,15 @@ const itemVariants: Variants = {
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const renderedAtRef = useRef<HTMLInputElement>(null);
+
+  // Stamp the form with the time it became interactive on the client.
+  // The server action rejects submissions that come back implausibly fast.
+  useEffect(() => {
+    if (renderedAtRef.current) {
+      renderedAtRef.current.value = String(Date.now());
+    }
+  }, []);
 
   return (
     <section
@@ -135,6 +144,19 @@ export default function Contact() {
               toast.success("Message sent — thanks, I'll be in touch.");
             }}
           >
+            {/* Honeypot: hidden from humans, tempting to bots. Must stay empty. */}
+            <div className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+              <label htmlFor="company">Company (leave this empty)</label>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+            <input ref={renderedAtRef} type="hidden" name="renderedAt" />
+
             <label className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-fg-subtle">
               Your email
             </label>

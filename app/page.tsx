@@ -1,5 +1,4 @@
 import About from "@/components/about";
-import Certification from "@/components/certification";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Hero from "@/components/hero";
@@ -18,7 +17,6 @@ export default function Home() {
       <Publications />
       <Experience />
       <Skills />
-      <Certification />
       <Contact />
     </main>
     /* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">

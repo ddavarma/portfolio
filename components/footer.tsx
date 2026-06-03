@@ -2,15 +2,15 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-500">
-      <small className="mb-2  block text-xs">
-        &copy; 2030 Aditya Varma. All rights reserved.
-      </small>
-      <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React & Next.js (App Router & Server actions), TypeScript, Tailwind CSS,
-        Framer Motion, React Email & Resend, Vercel hosting.
-      </p>
+    <footer className="mx-auto mb-12 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col gap-3 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-fg-subtle">
+          &copy; 2026 Devi Aditya Varma Dantuluri
+        </p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-fg-subtle">
+          Next.js · TypeScript · Tailwind · Framer Motion · Vercel
+        </p>
+      </div>
     </footer>
   );
 }

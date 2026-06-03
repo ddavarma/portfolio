@@ -49,7 +49,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body className="font-sans bg-bg text-fg antialiased relative pt-28 sm:pt-36">
+      <body className="font-sans bg-bg text-fg antialiased relative pt-36 sm:pt-32">
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />

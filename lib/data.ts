@@ -35,9 +35,11 @@ import {
 export const links: ReadonlyArray<{ name: SectionName; hash: string }> = [
   { name: "Home", hash: "#home" },
   { name: "About", hash: "#about" },
-  { name: "Skills", hash: "#skills" },
+  { name: "Research", hash: "#research" },
+  { name: "Work", hash: "#work" },
+  { name: "Publications", hash: "#publications" },
   { name: "Experience", hash: "#experience" },
-  { name: "Certfication", hash: "#certification" },
+  { name: "Skills", hash: "#skills" },
   { name: "Contact", hash: "#contact" },
 ] as const;
 
